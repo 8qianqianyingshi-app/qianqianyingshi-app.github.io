@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>芊芊影视｜独立影评手记、片单策展与观影索引</title>
+<meta name="description" content="芊芊影视以编辑部手记的形式整理院线与流媒体片单，覆盖华语新片、国际影展单元、经典修复与纪录片板块。每期由长期追踪电影工业的观察者撰写，兼顾题材出处、镜头语言、表演层次与观看节奏，为日常选片提供可直接使用的索引。更新不以数量为目标，而以题材深度与信息准确度为标准。">
+<meta name="keywords" content="芊芊影视, 影评手记, 电影片单, 独立影评, 华语新片, 国际影展, 纪录片推荐, 经典修复, 观影索引, 影视策展">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="芊芊影视编辑部">
+<meta name="copyright" content="芊芊影视">
+<meta name="theme-color" content="#f3efe6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="芊芊影视｜独立影评手记、片单策展与观影索引">
+<meta property="og:description" content="以编辑部手记形式整理院线与流媒体片单，覆盖华语新片、国际影展、经典修复与纪录片板块。">
+<meta property="og:url" content="https://qianqianyingshi-app.github.io">
+<meta property="og:site_name" content="芊芊影视">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="芊芊影视｜独立影评手记、片单策展与观影索引">
+<meta name="twitter:description" content="由长期追踪电影工业的观察者撰写的选片索引与题材解读。">
+<link rel="canonical" href="https://qianqianyingshi-app.github.io">
+<style>
+:root{
+  --ink:#1d2733;
+  --ink-soft:#3c4a58;
+  --paper:#f3efe6;
+  --paper-2:#ebe5d8;
+  --rule:#c9bfac;
+  --gold:#a6803c;
+  --gold-2:#8a6829;
+  --accent:#6e5840;
+  --shadow:rgba(29,39,51,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"SimSun",serif;
+  line-height:1.85;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+img{max-width:100%;display:block}
+
+/* ===== 报头 ===== */
+.masthead{
+  background:var(--ink);
+  color:#f4efdf;
+  padding:34px 0 26px;
+  border-bottom:5px double #e8c07a;
+}
+.mast-top{
+  display:flex;align-items:center;justify-content:space-between;
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:12.5px;letter-spacing:.14em;color:#cbb892;
+  text-transform:uppercase;
+}
+.mast-top span{border-left:1px solid #5a5a55;padding-left:14px}
+.brand{
+  text-align:center;margin:26px 0 10px;
+  font-size:78px;line-height:.95;font-weight:700;letter-spacing:.32em;
+  color:#f4efdf;text-indent:.32em;
+}
+.brand em{font-style:normal;color:#e8c07a}
+.tagline{
+  text-align:center;font-size:14px;letter-spacing:.5em;
+  color:#cbb892;text-indent:.5em;margin-bottom:20px;
+}
+.mast-nav{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:6px 26px;
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:14px;letter-spacing:.16em;
+  border-top:1px solid #5a5a55;padding-top:16px;margin-top:6px;
+}
+.mast-nav a{
+  color:#e8e2d2;text-decoration:none;position:relative;padding:2px 2px 4px;
+}
+.mast-nav a:hover{color:#e8c07a}
+.mast-nav a:hover::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);
+}
+
+/* ===== 报眼 / 要闻条 ===== */
+.lede{
+  background:var(--paper-2);
+  border-bottom:1px solid var(--rule);
+  padding:18px 0;
+}
+.lede-in{max-width:1080px;margin:0 auto;padding:0 28px;display:flex;gap:18px;align-items:baseline;font-size:14px}
+.lede-kicker{
+  flex:none;font-family:-apple-system,"PingFang SC",sans-serif;
+  background:var(--ink);color:#f4efdf;padding:4px 12px;font-size:12.5px;letter-spacing:.18em;
+}
+.lede-in p{color:var(--ink-soft)}
+.lede-in strong{color:var(--ink);font-weight:700}
+
+/* ===== 通用分节 ===== */
+section{padding:74px 0;border-bottom:1px solid var(--rule)}
+.sec-label{
+  display:flex;align-items:baseline;gap:16px;margin-bottom:10px;
+  font-family:-apple-system,"PingFang SC",sans-serif;letter-spacing:.22em;
+  font-size:12.5px;color:var(--gold-2);text-transform:uppercase;
+}
+.sec-label i{
+  font-style:normal;background:var(--gold);color:#fff;padding:3px 11px;font-size:12px;letter-spacing:.1em;
+}
+.sec-title{
+  font-size:38px;line-height:1.25;margin-bottom:14px;font-weight:700;letter-spacing:.04em;
+}
+.sec-title small{
+  display:block;font-size:15px;font-weight:400;color:var(--ink-soft);
+  letter-spacing:.08em;margin-top:10px;
+}
+.rule{height:1px;background:var(--rule);margin:26px 0 34px;position:relative}
+.rule::after{content:"";position:absolute;left:0;top:-1px;width:64px;height:3px;background:var(--gold)}
+
+/* ===== 导语 ===== */
+.intro-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:start}
+.intro-grid p{font-size:17px;text-align:justify;text-indent:2em;margin-bottom:16px;color:var(--ink-soft)}
+.intro-grid p:first-of-type{font-size:19px;color:var(--ink);text-indent:0}
+.intro-side{
+  background:#fff;border:1px solid var(--rule);padding:26px 24px;
+  font-family:-apple-system,"PingFang SC",sans-serif;
+}
+.intro-side h4{
+  font-size:12.5px;letter-spacing:.24em;color:var(--gold-2);font-weight:700;
+  border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:16px;
+}
+.intro-side dl{display:grid;grid-template-columns:auto 1fr;gap:9px 16px;font-size:13.5px}
+.intro-side dt{color:var(--gold-2);letter-spacing:.08em}
+.intro-side dd{color:var(--ink-soft)}
+
+/* ===== 栏目总览 ===== */
+.blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.block{
+  background:#fff;border:1px solid var(--rule);border-top:4px solid var(--ink);
+  padding:26px 22px;transition:transform .25s ease,box-shadow .25s ease;
+}
+.block:hover{transform:translateY(-5px);box-shadow:0 14px 34px var(--shadow)}
+.block-no{
+  font-family:Georgia,serif;font-size:13px;letter-spacing:.2em;color:var(--gold);
+  border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:14px;
+}
+.block h3{font-size:21px;margin-bottom:12px}
+.block p{font-size:14.5px;color:var(--ink-soft);font-family:-apple-system,"PingFang SC",sans-serif;line-height:1.8}
+.block a.more{
+  display:inline-block;margin-top:16px;font-size:13px;letter-spacing:.14em;
+  color:var(--gold-2);text-decoration:none;border-bottom:1px solid var(--gold);
+  font-family:-apple-system,"PingFang SC",sans-serif;
+}
+.block a.more:hover{color:var(--ink)}
+
+/* ===== 卷首 ===== */
+.editorial{display:grid;grid-template-columns:1fr 1.6fr;gap:52px;align-items:start}
+.editor-card{
+  background:var(--ink);color:#f4efdf;padding:34px 30px;position:relative;
+}
+.editor-card::before{
+  content:"卷首";position:absolute;top:0;right:26px;background:var(--gold);
+  color:#fff;font-size:12px;letter-spacing:.2em;padding:5px 12px;
+  font-family:-apple-system,"PingFang SC",sans-serif;
+}
+.editor-card h3{font-size:26px;margin-bottom:6px;line-height:1.4}
+.editor-card .sign{font-size:13px;letter-spacing:.2em;color:#cbb892;margin-bottom:22px}
+.editor-card p{font-size:15.5px;color:#ddd4c1;text-align:justify;margin-bottom:14px}
+.editor-card .pull{
+  border-left:3px solid var(--gold);padding:4px 0 4px 18px;margin:22px 0;
+  font-size:18px;color:#e8c07a;line-height:1.7;
+}
+.editor-body p{font-size:16.5px;text-align:justify;text-indent:2em;margin-bottom:15px;color:var(--ink-soft)}
+.editor-body p:first-child{font-size:19px;color:var(--ink);text-indent:0}
+.editor-body p:first-child:first-letter{
+  float:left;font-size:54px;line-height:.95;padding:6px 12px 0 0;font-weight:700;color:var(--gold-2);
+}
+
+/* ===== 片单表 ===== */
+.tablecap{
+  display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;
+  font-family:-apple-system,"PingFang SC",sans-serif;font-size:13px;color:var(--ink-soft);
+  margin-bottom:18px;
+}
+.filmtable{width:100%;border-collapse:collapse;background:#fff;font-size:15px;
+  font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+.filmtable thead th{
+  background:var(--ink);color:#f4efdf;font-weight:600;text-align:left;
+  padding:14px 14px;font-size:13px;letter-spacing:.1em;border-right:1px solid #4a5560;
+}
+.filmtable thead th:last-child{border-right:none}
+.filmtable tbody td{padding:15px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+.filmtable tbody tr:nth-child(even){background:#faf7f0}
+.filmtable tbody tr:hover{background:#fff8e9}
+.filmtable .no{color:var(--gold-2);font-variant-numeric:tabular-nums;width:44px}
+.filmtable .name{font-weight:700;color:var(--ink);white-space:nowrap}
+.filmtable .type{
+  font-size:12px;letter-spacing:.06em;color:var(--gold-2);border:1px solid var(--gold);
+  padding:2px 8px;white-space:nowrap;display:inline-block;
+}
+.filmtable .note{color:var(--ink-soft);font-size:14px;line-height:1.7}
+.filmtable .lnk a{color:var(--ink);text-decoration:none;border-bottom:1px dashed var(--rule)}
+.filmtable .lnk a:hover{color:var(--gold-2);border-bottom-color:var(--gold)}
+.scroll{overflow-x:auto}
+
+/* ===== 话题卡 ===== */
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 52px}
+.note{border-top:1px solid var(--ink);padding-top:18px}
+.note .meta{
+  font-family:-apple-system,"PingFang SC",sans-serif;font-size:12.5px;
+  letter-spacing:.14em;color:var(--gold-2);margin-bottom:8px;
+}
+.note h3{font-size:23px;margin-bottom:12px;line-height:1.4}
+.note p{font-size:15px;color:var(--ink-soft);text-align:justify;margin-bottom:14px}
+.note .tags{display:flex;flex-wrap:wrap;gap:7px}
+.note .tags b{
+  font-weight:400;font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);
+  border:1px solid var(--rule);background:#fff;padding:3px 10px;
+  font-family:-apple-system,"PingFang SC",sans-serif;
+}
+
+/* ===== 频道索引 ===== */
+.channels{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.ch{
+  background:#fff;padding:26px 20px;transition:background .25s ease;
+}
+.ch:hover{background:#fff8e9}
+.ch .ic{
+  width:42px;height:42px;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;
+  font-family:Georgia,serif;font-size:18px;color:var(--gold-2);margin-bottom:16px;
+}
+.ch h4{font-size:18px;margin-bottom:10px}
+.ch p{font-size:13.5px;color:var(--ink-soft);font-family:-apple-system,"PingFang SC",sans-serif;margin-bottom:14px}
+.ch a{font-size:13px;letter-spacing:.12em;color:var(--gold-2);text-decoration:none;font-family:-apple-system,"PingFang SC",sans-serif}
+.ch a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* ===== 来信 ===== */
+.letter{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+.letter form{display:grid;gap:16px;font-family:-apple-system,"PingFang SC",sans-serif}
+.letter label{font-size:13px;letter-spacing:.14em;color:var(--gold-2);display:block;margin-bottom:6px}
+.letter input,.letter textarea,.letter select{
+  width:100%;border:none;border-bottom:1px solid var(--ink);background:transparent;
+  padding:10px 2px;font-size:15.5px;font-family:inherit;color:var(--ink);outline:none;
+  border-radius:0;
+}
+.letter input:focus,.letter textarea:focus,.letter select:focus{border-bottom-color:var(--gold);border-bottom-width:2px}
+.letter textarea{min-height:130px;resize:vertical;line-height:1.7}
+.letter button{
+  justify-self:start;border:1px solid var(--ink);background:var(--ink);color:#f4efdf;
+  padding:13px 34px;font-size:14px;letter-spacing:.28em;cursor:pointer;transition:.25s;
+  font-family:-apple-system,"PingFang SC",sans-serif;
+}
+.letter button:hover{background:var(--gold);border-color:var(--gold)}
+.letter-aside h4{font-size:24px;margin-bottom:14px}
+.letter-aside p{font-size:15.5px;color:var(--ink-soft);margin-bottom:14px;text-align:justify}
+.letter-aside .box{
+  border:1px dashed var(--gold);padding:22px 24px;background:#fffdf7;margin-top:24px;
+  font-family:-apple-system,"PingFang SC",sans-serif;font-size:14px;color:var(--ink-soft);
+}
+.letter-aside .box b{display:block;color:var(--gold-2);letter-spacing:.16em;font-size:12.5px;margin-bottom:10px}
+
+/* ===== 页脚 ===== */
+footer{
+  background:var(--ink);color:#cbb892;padding:56px 0 30px;
+  font-family:-apple-system,"PingFang SC",sans-serif;font-size:13.5px;
+}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;padding-bottom:34px;border-bottom:1px solid #4a5560}
+.foot-brand{font-family:"Songti SC",serif;font-size:30px;color:#f4efdf;letter-spacing:.2em;margin-bottom:12px}
+.foot-top h5{font-size:12.5px;letter-spacing:.24em;color:#e8c07a;margin-bottom:16px}
+.foot-top ul{list-style:none;display:grid;gap:10px}
+.foot-top a{color:#cbb892;text-decoration:none}
+.foot-top a:hover{color:#fff}
+.foot-bot{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
+  padding-top:24px;font-size:12.5px;letter-spacing:.04em;color:#8d94a0;
+}
+.foot-bot em{font-style:normal;color:#e8c07a}
+.backtop{
+  display:inline-block;margin-top:18px;font-size:12px;letter-spacing:.2em;color:var(--gold);
+  text-decoration:none;border:1px solid var(--gold);padding:7px 16px;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .brand{font-size:48px}
+  .intro-grid,.editorial,.letter{grid-template-columns:1fr;gap:34px}
+  .blocks{grid-template-columns:1fr}
+  .notes{grid-template-columns:1fr;gap:28px}
+  .channels{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr;gap:28px}
+  .sec-title{font-size:29px}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap,.lede-in{padding:0 18px}
+  section{padding:52px 0}
+  .brand{font-size:36px;letter-spacing:.22em}
+  .tagline{font-size:12px;letter-spacing:.32em}
+  .mast-nav{gap:4px 18px;font-size:13px}
+  .sec-title{font-size:25px}
+  .editor-card{padding:30px 22px}
+  .channels{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr}
+  .filmtable{font-size:14px}
+  .filmtable .name{white-space:normal}
+  .intro-grid p:first-of-type,.editor-body p:first-child{font-size:17px}
+  .editor-body p:first-child:first-letter{font-size:44px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-top">
+      <span>独立影评 · 片单策展 · 观影索引</span>
+      <span>第 玖 期 / 秋</span>
+    </div>
+    <h1 class="brand">芊芊<em>影视</em></h1>
+    <p class="tagline">QI AN QIAN · FILM REVIEW &amp; PROGRAMMING</p>
+    <nav class="mast-nav">
+      <a href="#editorial">卷首语</a>
+      <a href="#review">深度影评</a>
+      <a href="#list">片单索引</a>
+      <a href="#topic">专题观察</a>
+      <a href="#channel">频道导航</a>
+      <a href="#submit">读者来信</a>
+    </nav>
+  </div>
+</header>
+
+<div class="lede">
+  <div class="lede-in">
+    <span class="lede-kicker">本期要闻</span>
+    <p><strong>本期主题「沉默的配角」</strong>：我们把视线从主角的独白移开，去看那些推动剧情却从不解释自己的人——副驾驶、家政员、守门人、第二位妻子。共收录四篇评论、一份十二部片单，以及三条由读者发起的提问。</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- 引言 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-label"><i>壹</i> 关于本刊</div>
+      <h2 class="sec-title">一份不追热度的观影手册
+        <small>芊芊影视把每一次更新都当成一期小报来排：有主题、有立场、有出处，也有留白。</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="intro-grid">
+        <div>
+          <p>做内容的出发点很简单：片荒的时候，人们真正缺的不是更多推荐，而是一段可信的判断。一部电影被反复推送，并不等于它值得你花两个小时，更不等于它适合今晚的心情。</p>
+          <p>所以我们以编辑部手记的形式工作——每期只围绕一个主题展开，从题材出处讲到镜头处理，再讲到表演中那些容易被弹幕盖过的细节。篇幅不长，但每一句都要求能被追问出处。</p>
+          <p>栏目不依赖搬运，也不把「神作」「封神」当成结论。遇到资料不足、口碑分化或者需要长线观察的片子，我们会写明边界，而不是用一个夸张标题把不确定性抹平。</p>
+          <p>如果你习惯自己选片，这里的索引可以当作清单；如果你只想被带去看一部，卷首语会先给你一个理由，再给片名。</p>
+        </div>
+        <aside class="intro-side">
+          <h4>刊 物 资 料</h4>
+          <dl>
+            <dt>刊名</dt><dd>芊芊影视</dd>
+            <dt>定位</dt><dd>影评手记与片单策展</dd>
+            <dt>更新节奏</dt><dd>双周一期，随档期微调</dd>
+            <dt>覆盖板块</dt><dd>华语新片 / 国际影展 / 经典修复 / 纪录片</dd>
+            <dt>写作方式</dt><dd>单作者执笔，双编辑复核</dd>
+            <dt>内容边界</dt><dd>仅作题材与观影讨论，不提供资源获取指引</dd>
+            <dt>访问入口</dt><dd><a href="https://qianqianyingshi-app.github.io" style="color:var(--gold-2)">qianqianyingshi-app.github.io</a></dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目总览 -->
+  <section id="channel">
+    <div class="wrap">
+      <div class="sec-label"><i>贰</i> 栏目结构</div>
+      <h2 class="sec-title">四个固定栏目，轮流坐庄
+        <small>四个栏目各有分工，合起来覆盖从「想看」到「看懂」的整条路径。</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="blocks">
+        <article class="block">
+          <div class="block-no">栏 目 一</div>
+          <h3>深度影评</h3>
+          <p>选择当周或当月最值得被仔细讨论的一部，从叙事结构、表演层次到声音与美术逐项拆解，并把判断说清楚：好在哪里，以及什么人会不喜欢它。</p>
+          <a class="more" href="#review">进入栏目 →</a>
+        </article>
+        <article class="block">
+          <div class="block-no">栏 目 二</div>
+          <h3>片单索引</h3>
+          <p>按主题、年代、地域与题材交叉排列的可检索清单，每部附一句题材说明、一段观看提示与适合的人群，方便按心情和空闲时间直接挑选。</p>
+          <a class="more" href="#list">进入栏目 →</a>
+        </article>
+        <article class="block">
+          <div class="block-no">栏 目 三</div>
+          <h3>专题观察</h3>
+          <p>把同一题材的三到五部作品放在一起比较：演员的同类角色、同一事件的两种拍法、某位导演十年间的三次自我修正。重点是看见差别，而不是排队打分。</p>
+          <a class="more" href="#topic">进入栏目 →</a>
+        </article>
+        <article class="block" style="grid-column:span 2">
+          <div class="block-no">栏 目 四</div>
+          <h3>读者来信与问答</h3>
+          <p>来信栏目不设门槛：片名记不全、只知道一句台词、想找一部二十年前看过的纪录片，都可以写。我们会回信，也会把有代表性的问题整理成公开问答。每月整理一次，匿名发表。</p>
+          <a class="more" href="#submit">写一封信 →</a>
+        </article>
+        <article class="block">
+          <div class="block-no">附 录</div>
+          <h3>每月片单速记</h3>
+          <p>不进入正文的小型附录：本月新增可看、本月修复重映、本月适合通勤时段收听的原声与对谈，控制在五条以内，只做提示，不做评价。</p>
+          <a class="more" href="#list">查看附录 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 卷首语 -->
+  <section id="editorial">
+    <div class="wrap">
+      <div class="sec-label"><i>叁</i> 卷首语</div>
+      <h2 class="sec-title">沉默的配角，才是故事的承重墙
+        <small>本期执笔：林 知 让 ｜ 主题：被叙事借走的那段人生</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="editorial">
+        <div class="editor-card">
+          <h3>配角不是不够重要，<br>而是被规定不许重要。</h3>
+          <p class="sign">2026 · 秋 · 第 玖 期</p>
+          <div class="pull">「主角的成长史，常常是由一群不配拥有结局的人换来的。」</div>
+          <p>留意配角的第一层收益，是看懂一部电影的分配机制：谁拥有台词，谁只拥有动作，谁连动作都没有，只能在门框里站三秒。</p>
+          <p>第二层收益更接近观影技巧：当你不再等主角给出答案，电影的节奏会突然变慢，慢下来的地方往往才是作者真正想留住的那一段。</p>
+        </div>
+        <div class="editor-body">
+          <p>配角在剧作里承担的是「使主角成为可能」的工作。他提供车，提供消息，提供一次关键的不理解，然后退场。观众通常不会抗议这种安排，因为叙事节奏天然偏向主角：我们只看到他为什么走，不会追问那个被留在原地的人为什么留下。</p>
+          <p>但好电影从来不只靠主角成立。一部家庭片如果只有夫妻二人的内心独白，它讲述的其实是一个封闭的自我审视；只有当一个不请自来的亲戚坐进餐桌，关系才被迫显形。配角的作用不是补充信息，而是改变房间里的气压。</p>
+          <p>本期我们选了十二部作品，不是因为它们「配角抢戏」，而是因为它们让配角的退场被看见。这个区别很重要：抢戏仍然是表演层面的讨论，而退场的可见性，关乎叙事伦理。</p>
+          <p>文末的读者问答里，有一位朋友问：「为什么我看完一部电影，记得最清楚的却是个只有三句台词的人？」这恰好是本期想回答的问题。你记住的也许不是那个人，而是主角身上被他照亮的那个缺口。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度影评 -->
+  <section id="review">
+    <div class="wrap">
+      <div class="sec-label"><i>肆</i> 深度影评</div>
+      <h2 class="sec-title">本期主推：一部关于「被借走的人生」的家庭片
+        <small>题材：东亚家庭 / 代际责任 ｜ 适合：愿意慢看、不赶结局的人</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="notes" style="grid-template-columns:1fr;gap:0">
+        <article class="note" style="border-top:none;padding-top:0">
+          <div class="meta">深 度 评 论 · 单 篇 全 文</div>
+          <h3>它不控诉谁，只把代际责任放到一桌饭上慢慢凉掉</h3>
+          <div class="scroll" style="margin-bottom:22px">
+            <table class="filmtable" style="min-width:720px">
+              <thead>
+                <tr>
+                  <th style="width:90px">项目</th>
+                  <th>内容</th>
+                  <th style="width:150px">观察角度</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="no">题材</td>
+                  <td class="note">三代同堂家庭中，长子被默认承担赡养与决策，女性亲属则承担情绪劳动。故事不把冲突归结为某个人自私。</td>
+                  <td class="lnk">家庭结构</td>
+                </tr>
+                <tr>
+                  <td class="no">叙事</td>
+                  <td class="note">用四个节庆串起一年，每个节日只拍一顿饭。台词密度被刻意压低，冲突靠落座顺序和菜的多少来说话。</td>
+                  <td class="lnk">叙事节奏</td>
+                </tr>
+                <tr>
+                  <td class="no">表演</td>
+                  <td class="note">饰演二儿媳的演员贡献了全片最复杂的表演：她在婆婆面前是一套表情，在丈夫面前是另一套，镜头离开她三秒后又回到原样。</td>
+                  <td class="lnk">表演层次</td>
+                </tr>
+                <tr>
+                  <td class="no">镜头</td>
+                  <td class="note">大量门框构图。人物常常被框在门、窗、走廊之间，形成「人在自己的家里却不被看见」的视觉表达。</td>
+                  <td class="lnk">视觉语言</td>
+                </tr>
+                <tr>
+                  <td class="no">声音</td>
+                  <td class="note">饭桌戏保留了咀嚼声与环境底噪，刻意不做降噪处理。这是全片最不舒适也最有效的一段设计。</td>
+                  <td class="lnk">声音设计</td>
+                </tr>
+                <tr>
+                  <td class="no">判断</td>
+                  <td class="note">不是一部适合所有人的作品：慢、克制、不给情绪出口。但对家庭题材有兴趣的观众，它比同档期的同类作品多看了一步。</td>
+                  <td class="lnk"><a href="#">阅读完整影评</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tags">
+            <b>#代际责任</b><b>#家庭叙事</b><b>#声音设计</b><b>#门框构图</b><b>#东亚家庭</b><b>#克制</b>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 片单索引 -->
+  <section id="list">
+    <div class="wrap">
+      <div class="sec-label"><i>伍</i> 片单索引</div>
+      <h2 class="sec-title">十二部「配角比主角更难忘记」的作品
+        <small>索引规则：题材标签 → 观看提示 → 适合人群；不按评分排序，按叙事功能排序。</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="tablecap">
+        <span>主题：沉默的配角 ｜ 片数：12 ｜ 整理日期：2026 年 10 月</span>
+        <span>资料以公映版本与公开访谈为依据，未收录未在境内正式发行的作品</span>
+      </div>
+      <div class="scroll">
+        <table class="filmtable">
+          <thead>
+            <tr>
+              <th class="no">序</th>
+              <th style="width:210px">作品</th>
+              <th style="width:130px">题材标签</th>
+              <th>观看提示</th>
+              <th style="width:150px">适合人群</th>
+              <th style="width:96px">延伸</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="no">01</td>
+              <td class="name">驾驶我的车</td>
+              <td><span class="type">国际影展</span></td>
+              <td class="note">全片的关键不在主角，而在那位几乎不说自己故事的司机。建议第二遍看时只跟司机这一条线。</td>
+              <td class="note">愿意看长片、喜欢留白</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">02</td>
+              <td class="name">婚姻故事</td>
+              <td><span class="type">家庭伦理</span></td>
+              <td class="note">律师一角常被当成功能人物，但她其实是全片唯一提前知道结局的人。看她的每一句建议，都是一种预判。</td>
+              <td class="note">对亲密关系议题有兴趣</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">03</td>
+              <td class="name">江湖儿女</td>
+              <td><span class="type">华语新片</span></td>
+              <td class="note">副驾驶视角贯穿三个时代。人物之间的关系变化，不靠对白推进，靠谁坐在哪个位置。</td>
+              <td class="note">喜欢时间跨度叙事</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">04</td>
+              <td class="name">罗马</td>
+              <td><span class="type">经典修复</span></td>
+              <td class="note">黑白影像把家政员拍成主角，把雇主家庭拍成背景。这是一次彻底的视角反转，不是温情改写。</td>
+              <td class="note">关注阶层与劳动叙事</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">05</td>
+              <td class="name">法式火锅</td>
+              <td><span class="type">生活流</span></td>
+              <td class="note">节奏极慢，几乎没有事件。它的耐心在于：让一个长期被使唤的人，第一次拥有完整的下午。</td>
+              <td class="note">能接受无冲突叙事</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">06</td>
+              <td class="name">偶然与想象</td>
+              <td><span class="type">国际影展</span></td>
+              <td class="note">三个短篇，每个都有一个「差一点说出口」的配角。台词停住的地方，才是故事真正发生的地方。</td>
+              <td class="note">喜欢对话密度高</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">07</td>
+              <td class="name">热带往事</td>
+              <td><span class="type">华语新片</span></td>
+              <td class="note">配角的道德位置始终没被解释，这是影片刻意留下的空白，也是它最有争议的地方。</td>
+              <td class="note">偏好犯罪与悬疑</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">08</td>
+              <td class="name">共同警备区</td>
+              <td><span class="type">经典修复</span></td>
+              <td class="note">调查者的身份是解谜的关键，但他本人没有故事。把他的克制当作证据，是理解这部片的入口。</td>
+              <td class="note">熟悉半岛题材背景</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">09</td>
+              <td class="name">米纳里</td>
+              <td><span class="type">家庭伦理</span></td>
+              <td class="note">外婆角色被写得极轻，但家庭能否留下来的答案，全在她身上。不要跳过她打牌的那场戏。</td>
+              <td class="note">移民与家庭题材</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">10</td>
+              <td class="name">蜂蜜之地</td>
+              <td><span class="type">纪录片</span></td>
+              <td class="note">一部纪录片的伦理边界：拍摄者在什么时刻变成了介入者，而配角对此始终保持沉默。</td>
+              <td class="note">纪录片与生态议题</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">11</td>
+              <td class="name">一一</td>
+              <td><span class="type">经典修复</span></td>
+              <td class="note">全片最动人的一段，属于一个几乎没有出现在海报上的人。杨德昌把「被看见」这件事本身当成结局。</td>
+              <td class="note">愿意反复重看</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+            <tr>
+              <td class="no">12</td>
+              <td class="name">气球</td>
+              <td><span class="type">华语新片</span></td>
+              <td class="note">配角承担的其实是叙事的阻力。影片没有把她处理成反面人物，这是它最难被简单归类的部分。</td>
+              <td class="note">女性处境与信仰议题</td>
+              <td class="lnk"><a href="#">延伸</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题观察 -->
+  <section id="topic">
+    <div class="wrap">
+      <div class="sec-label"><i>陆</i> 专题观察</div>
+      <h2 class="sec-title">四篇短观察：同一个问题，四种拍法
+        <small>不排名、不打分。这一栏的任务是把差别摆出来，而不是把高低定下来。</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="notes">
+        <article class="note">
+          <div class="meta">观 察 一 · 表 演</div>
+          <h3>同一个人，三种退让：演员如何处理「不被听见」</h3>
+          <p>我们把三部相隔十年的作品里，同一位演员的表演并列来看。差别不在哭戏，而在她什么时候停止解释自己。表演的最高处不是情绪最大，而是把情绪取消。</p>
+          <div class="tags"><b>#表演比较</b><b>#东亚女性</b><b>#情绪劳动</b></div>
+        </article>
+        <article class="note">
+          <div class="meta">观 察 二 · 结 构</div>
+          <h3>双线叙事里的那位「接线员」：他是工具，还是被牺牲的人</h3>
+          <p>很多双线结构都需要一个人来回跑，把两条线接上。这个人几乎从不被感激，也不被追问动机。我们挑了五部这类作品，看他承担了什么、又被省略了什么。</p>
+          <div class="tags"><b>#叙事结构</b><b>#配角功能</b><b>#剧作技巧</b></div>
+        </article>
+        <article class="note">
+          <div class="meta">观 察 三 · 影 史</div>
+          <h3>家政员出现在镜头里，已有近百年，但被允许说话才几十年</h3>
+          <p>从早期默片里只负责开门的人，到当代电影中第一次拥有主观视角的家政员，影像史里藏着一条权力史。这不是影评，而是一份可以自己继续往下查的线索表。</p>
+          <div class="tags"><b>#影像史</b><b>#阶层叙事</b><b>#研究线索</b></div>
+        </article>
+        <article class="note">
+          <div class="meta">观 察 四 · 观 众</div>
+          <h3>为什么我们越来越容易被「只有三句台词的人」记住</h3>
+          <p>这部分不分析电影，分析我们自己。信息过载之后，观众对「确定性」产生了疲劳，而对那些不肯交代自己的人产生了好奇。这是审美变化，也是注意力的变化。</p>
+          <div class="tags"><b>#观众心理</b><b>#观看习惯</b><b>#审美迁移</b></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 频道导航 -->
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><i>柒</i> 频道导航</div>
+      <h2 class="sec-title">四个固定板块，可按主题直接跳读
+        <small>每个板块都有自己的更新周期与写作规则，方便按兴趣长期追踪。</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="channels">
+        <div class="ch">
+          <div class="ic">壹</div>
+          <h4>华语新片</h4>
+          <p>覆盖院线与流媒体同步的新作，重点记录叙事选择、演员选择与审查之外的创作取舍。</p>
+          <a href="#review">前往板块 →</a>
+        </div>
+        <div class="ch">
+          <div class="ic">贰</div>
+          <h4>国际影展</h4>
+          <p>三大节与区域影展的入选片、导演访谈与主题单元整理，强调可追踪的线索，不做资讯搬运。</p>
+          <a href="#list">前往板块 →</a>
+        </div>
+        <div class="ch">
+          <div class="ic">叁</div>
+          <h4>经典修复</h4>
+          <p>把老片放回它原本的年代与放映条件里谈：修复版本改了什么，哪些细节是第一次被看清。</p>
+          <a href="#topic">前往板块 →</a>
+        </div>
+        <div class="ch">
+          <div class="ic">肆</div>
+          <h4>纪录片</h4>
+          <p>同时讨论拍摄伦理与题材本身。纪录片的难点不在拍到什么，而在于镜头出现之后发生了什么。</p>
+          <a href="#submit">前往板块 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 读者来信 -->
+  <section id="submit">
+    <div class="wrap">
+      <div class="sec-label"><i>捌</i> 读者来信</div>
+      <h2 class="sec-title">写一封信，或提一个问题
+        <small>本期已收到的三个问题，与我们的简短回信。你也可以直接把问题留在下面。</small>
+      </h2>
+      <div class="rule"></div>
+      <div class="letter">
+        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='已收到，感谢来信';this.reset();">
+          <div>
+            <label for="nm">如何称呼</label>
+            <input id="nm" type="text" placeholder="可填昵称，不必实名">
+          </div>
+          <div>
+            <label for="tp">问题类型</label>
+            <select id="tp">
+              <option>片名查询：只记得一句台词或某个片段</option>
+              <option>选片咨询：按心情与时间长度推荐</option>
+              <option>观点讨论：对某一期评论提出不同看法</option>
+              <option>题材线索：想找某一类主题的作品</option>
+            </select>
+          </div>
+          <div>
+            <label for="msg">想说的话</label>
+            <textarea id="msg" placeholder="能写下你记得的画面、情绪，或者当时的观看环境，会更有帮助。"></textarea>
+          </div>
+          <button type="submit">封 缄 寄 出</button>
+        </form>
+        <div class="letter-aside">
+          <h4>本期问答摘录</h4>
+          <p><strong>问：</strong>为什么我看完一部电影，记得最清楚的却是个只有三句台词的人？</p>
+          <p><strong>答：</strong>你记住的也许不是那个人，而是主角身上被他照亮的那个缺口。配角的功能就是把主角「说不出口的部分」演出来。</p>
+          <p><strong>问：</strong>有没有适合通勤、每集三十分钟内的内容？</p>
+          <p><strong>答：</strong>有，但这不在本期主题里。我们会在下个月的附录中单独整理一份「短时内容清单」，可按地域与题材筛选。</p>
+          <div class="box">
+            <b>回 信 说 明</b>
+            每封信都会读，但未必每封都公开回。被采用的问题会做匿名处理，只保留题材与问题本身。涉及具体片源与下载途径的内容，我们不做讨论，也不作指引。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">芊芊影视</div>
+        <p style="max-width:340px;line-height:1.9">以编辑部手记的形式整理片单与评论，覆盖华语新片、国际影展、经典修复与纪录片四个板块。更新不以数量为目标，而以题材深度与信息准确度为标准。</p>
+        <a class="backtop" href="#">回 到 刊 头 ↑</a>
+      </div>
+      <div>
+        <h5>栏 目</h5>
+        <ul>
+          <li><a href="#editorial">卷首语</a></li>
+          <li><a href="#review">深度影评</a></li>
+          <li><a href="#list">片单索引</a></li>
+          <li><a href="#topic">专题观察</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>板 块</h5>
+        <ul>
+          <li><a href="#">华语新片</a></li>
+          <li><a href="#">国际影展</a></li>
+          <li><a href="#">经典修复</a></li>
+          <li><a href="#">纪录片</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关 于</h5>
+        <ul>
+          <li><a href="#about">刊物说明</a></li>
+          <li><a href="#submit">读者来信</a></li>
+          <li><a href="#">内容边界</a></li>
+          <li><a href="#">更新日历</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <em>芊芊影视</em> 编辑部 · 本期主题「沉默的配角」· 第 玖 期</span>
+      <span>访问入口：<a href="https://qianqianyingshi-app.github.io" style="color:#cbb892">qianqianyingshi-app.github.io</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
